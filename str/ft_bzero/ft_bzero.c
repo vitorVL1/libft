@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 18:42:01 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/26 10:55:52 by vlima            ###   ########.fr       */
+/*   Created: 2022/10/26 12:19:54 by vlima             #+#    #+#             */
+/*   Updated: 2022/10/26 12:30:59 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h> 
 
-size_t	ft_strlen(const char *s)
+void	*ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	long int		i;
 
 	i = 0;
-	while (s[i] != '\0')
+
+	while (i < n)
 	{
+		((unsigned char *)s)[i] = '\0';
 		i++;
 	}
-	return (i);
+
 }
-
-/* 
+/* #include <strings.h>
 #include <stdio.h>
-
 int main()
 {
-	char *s;
-	s = "abc";
-	printf("%ld" , ft_strlen(s));
+	char s[] = "abcasdasdada";
+	printf("%s\n",s);
+	ft_bzero(s,2);
+	printf("%s",s);
+    bzero(s,2);
+	printf("%s",s);
 } */
