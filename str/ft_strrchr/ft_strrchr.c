@@ -1,43 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vitorvl <vitorvl@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 14:53:20 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/27 13:40:19 by vitorvl          ###   ########.fr       */
+/*   Created: 2022/10/27 16:37:30 by vitorvl           #+#    #+#             */
+/*   Updated: 2022/10/27 21:31:10 by vitorvl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-int	ft_isalpha(int c)
-
+#include <stddef.h>
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c >= 'a' && c <= 'z' || c >= 'a' && c <= 'z')
+    int i;
+	i = 0;
+	while (s[i] != '\0')
 	{
-		return (1);
+		i++;
 	}
-	else
-	{
-		return (0);
-	}
+	   
+	while (i != 0)
+    {
+        i--;
+        if(s[i] == c)
+        {
+            return((char *)&s[i]);
+        }
+        
+    }
+    return(NULL);
 }
 
 /* #include <stdio.h>
-
-int main()
+int main() 
 {
-    char c;
-
-    printf("Enter a character: ");
-    scanf("%c", &c);
-
-    if (ft_isalpha(c) == 0)
-         printf("%c is not an alphabet.", c);
-    else
-         printf("%c is an alphabet.", c);
-
-    return 0;
-} */
+    char s[] = "ABCfdfc";
+    
+    printf("%s\n",ft_strrchr(s,65));
+}  */

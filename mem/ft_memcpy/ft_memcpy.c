@@ -1,43 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vitorvl <vitorvl@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 14:53:20 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/27 13:40:19 by vitorvl          ###   ########.fr       */
+/*   Created: 2022/10/27 22:33:30 by vitorvl           #+#    #+#             */
+/*   Updated: 2022/10/27 22:36:54 by vitorvl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-int	ft_isalpha(int c)
-
+void *memcpy(void *dest, const void *src, size_t n)
 {
-	if (c >= 'a' && c <= 'z' || c >= 'a' && c <= 'z')
+    size_t i;
+    
+    i = 0;
+    
+	if (!dest && !src)
+    {
+        return (0);
+    }
+	
+	while (i < n)
 	{
-		return (1);
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+		i++;
 	}
-	else
-	{
-		return (0);
-	}
+	return (dest);
 }
-
-/* #include <stdio.h>
-
-int main()
-{
-    char c;
-
-    printf("Enter a character: ");
-    scanf("%c", &c);
-
-    if (ft_isalpha(c) == 0)
-         printf("%c is not an alphabet.", c);
-    else
-         printf("%c is an alphabet.", c);
-
-    return 0;
-} */

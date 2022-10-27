@@ -1,37 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vitorvl <vitorvl@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/27 03:18:48 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/27 16:37:49 by vitorvl          ###   ########.fr       */
+/*   Created: 2022/10/27 16:47:05 by vitorvl           #+#    #+#             */
+/*   Updated: 2022/10/27 21:50:45 by vitorvl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-char	*ft_strchr(const char *s, int c)
+
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    int i;
-
+    size_t	i;
+    
     i = 0;
-	while (s[i] != '\0')
+    
+	if (n == 0)
     {
-        
-        if(s[i] == c)
-        {
-            return((char *)&s[i]);
-        }
-        i++;
+        return (0);
     }
-    return(NULL);
+		
+	while (s1[i] == s2[i] && s1[i] != '\0')
+	{
+		if (i < (n - 1))
+        {
+            i++;
+        }
+			
+		else
+        {
+            return (0);
+        }
+	}
+	return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
 }
-
 /* #include <stdio.h>
 int main() 
 {
-    char s[] = "ABCfdf";
-    ft_strchr(s,73);
-    printf("%s\n",);
-} */
+    char s1[] = "BBCDfdfc";
+    char s2[] = "BBCDfdfc";
+    printf("%d\n", ft_strncmp(s1,s2,100));
+}  */

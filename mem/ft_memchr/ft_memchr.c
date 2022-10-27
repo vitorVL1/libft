@@ -1,43 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vitorvl <vitorvl@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 14:53:20 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/27 13:40:19 by vitorvl          ###   ########.fr       */
+/*   Created: 2022/10/27 22:59:54 by vitorvl           #+#    #+#             */
+/*   Updated: 2022/10/27 23:01:58 by vitorvl          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-int	ft_isalpha(int c)
-
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (c >= 'a' && c <= 'z' || c >= 'a' && c <= 'z')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+    int i;
+    i = 0;
+	while (s[i] < n)
+    {
+        
+        if(s[i] == c)
+        {
+            return((char *)&s[i]);
+        }
+        i++;
+    }
+    return(0);
 }
-
-/* #include <stdio.h>
-
-int main()
-{
-    char c;
-
-    printf("Enter a character: ");
-    scanf("%c", &c);
-
-    if (ft_isalpha(c) == 0)
-         printf("%c is not an alphabet.", c);
-    else
-         printf("%c is an alphabet.", c);
-
-    return 0;
-} */
