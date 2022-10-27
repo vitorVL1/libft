@@ -25,7 +25,7 @@ int	ft_isalpha(int c)
 	}
 }
 
-/* #include <stdio.h>
+#include <stdio.h>
 
 int main()
 {
@@ -40,4 +40,4 @@ int main()
          printf("%c is an alphabet.", c);
 
     return 0;
-} */
+}
