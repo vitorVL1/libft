@@ -6,10 +6,10 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 22:02:58 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/28 12:07:44 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/28 13:19:30 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_nptrnnptr(const char *haystack, const char *needle, size_t len)
 {
 }

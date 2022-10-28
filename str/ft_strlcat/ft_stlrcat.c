@@ -6,13 +6,13 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 13:38:57 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/28 12:08:49 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/28 12:58:19 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h> 
 
-size_t	strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	nptrlcat(char *renptrict dst, const char *renptrict src, size_t dstsize)
 {
 	int	i;
 	int	i1;

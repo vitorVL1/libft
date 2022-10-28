@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 12:19:54 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/28 12:02:04 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/28 12:58:19 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/* #include <strings.h>
+/* #include <nptrings.h>
 #include <stdio.h>
 int main()
 {

@@ -6,13 +6,13 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:37:30 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/28 12:08:08 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/28 13:20:42 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_nptrrchr(const char *s, int c)
 {
 	int	i;
 
@@ -37,5 +37,5 @@ int main()
 {
     char s[] = "ABCfdfc";
     
-    printf("%s\n",ft_strrchr(s,65));
+    printf("%s\n",ft_nptrrchr(s,65));
 }  */

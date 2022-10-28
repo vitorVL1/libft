@@ -6,13 +6,13 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:47:05 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/28 12:08:35 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/28 13:20:29 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_nptrncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
@@ -39,5 +39,5 @@ int main()
 {
     char s1[] = "BBCDfdfc";
     char s2[] = "BBCDfdfc";
-    printf("%d\n", ft_strncmp(s1,s2,100));
+    printf("%d\n", ft_nptrncmp(s1,s2,100));
 }  */
