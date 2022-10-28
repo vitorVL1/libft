@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 12:41:21 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/26 13:04:18 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/28 12:07:31 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,4 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		((unsigned char *) dst)[i] = ((unsigned char *) src)[i];
 		i++;
 	}
-
 }

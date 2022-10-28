@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 11:11:12 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/26 11:59:54 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/28 12:02:23 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	a = c;
 	i = 0;
-
 	while (i < n)
 	{
 		((unsigned char *)s)[i] = a;
 		i++;
 	}
-
 }
 /* #include <stdio.h>
 int main()

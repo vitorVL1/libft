@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vitorvl <vitorvl@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 14:53:20 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/27 13:40:19 by vitorvl          ###   ########.fr       */
+/*   Updated: 2022/10/28 12:00:53 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 
 int	ft_isalpha(int c)
 
@@ -26,7 +24,6 @@ int	ft_isalpha(int c)
 }
 
 /* #include <stdio.h>
-
 int main()
 {
     char c;

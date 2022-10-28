@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vitorvl <vitorvl@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 03:18:48 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/27 16:37:49 by vitorvl          ###   ########.fr       */
+/*   Updated: 2022/10/28 11:53:03 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+
 char	*ft_strchr(const char *s, int c)
 {
-    int i;
+	int	i;
 
-    i = 0;
+	i = 0;
 	while (s[i] != '\0')
-    {
-        
-        if(s[i] == c)
-        {
-            return((char *)&s[i]);
-        }
-        i++;
-    }
-    return(NULL);
+	{
+		if (s[i] == c)
+		{
+			return ((char *)&s[i]);
+		}
+		i ++;
+	}
+	return (NULL);
 }
 
 /* #include <stdio.h>

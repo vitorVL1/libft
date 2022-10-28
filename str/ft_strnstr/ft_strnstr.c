@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vitorvl <vitorvl@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 22:02:58 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/27 22:09:01 by vitorvl          ###   ########.fr       */
+/*   Updated: 2022/10/28 12:07:44 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    
 }

@@ -3,25 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vitorvl <vitorvl@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 22:59:54 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/27 23:01:58 by vitorvl          ###   ########.fr       */
+/*   Updated: 2022/10/28 11:49:35 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h> 
+
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-    int i;
-    i = 0;
+	int	i;
+
+	i = 0;
 	while (s[i] < n)
-    {
-        
-        if(s[i] == c)
-        {
-            return((char *)&s[i]);
-        }
-        i++;
-    }
-    return(0);
+	{
+		if (s[i] == c)
+		{
+			return ((char *)&s[i]);
+		}
+		i++;
+	}
+	return (0);
 }

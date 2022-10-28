@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vitorvl <vitorvl@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 22:46:46 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/27 22:56:36 by vitorvl          ###   ########.fr       */
+/*   Updated: 2022/10/28 12:03:41 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void *memmove(void *dest, const void *src, size_t n)
-{
+#include <stddef.h> 
 
+void	*memmove(void *dest, const void *src, size_t n)
+{
 }
