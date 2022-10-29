@@ -6,13 +6,13 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 03:18:48 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/28 13:21:15 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/29 16:18:20 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-char	*ft_nptrchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 

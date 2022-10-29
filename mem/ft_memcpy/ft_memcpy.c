@@ -6,13 +6,13 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 22:33:30 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/28 12:05:42 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/29 16:16:51 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h> 
 
-void	*memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t	i;
 

@@ -6,13 +6,13 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 23:05:11 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/28 12:02:51 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/29 16:16:57 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h> 
 
-int	memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	int	i;
 
