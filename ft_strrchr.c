@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:37:30 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/29 16:25:16 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/31 16:47:06 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		i++;
 	}
-	while (i != 0)
+	while (i >= 0)
 	{
-		i--;
 		if (s[i] == c)
 		{
 			return ((char *)&s[i]);
 		}
+		i--;
 	}
 	return (NULL);
 }
