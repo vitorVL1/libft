@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 22:02:58 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/31 15:07:27 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/31 18:03:43 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				return ((char *) &big[n - a]);
 		}
 	}
-	return (0);
+	return (NULL);
 }
 
 /* #include <stdio.h>
-#include <string.h>
+#include <string.h>|
 
 
 int main () {
