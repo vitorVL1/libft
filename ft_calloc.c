@@ -6,12 +6,11 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 17:00:57 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/28 17:19:23 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/31 16:03:23 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {

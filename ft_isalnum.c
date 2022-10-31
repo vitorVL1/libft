@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_srtlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 12:41:21 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/28 12:58:19 by vlima            ###   ########.fr       */
+/*   Created: 2022/10/25 18:19:04 by vlima             #+#    #+#             */
+/*   Updated: 2022/10/31 15:47:46 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h> 
+int	ft_isalnum(int c)
 
-size_t	ft_nptrlcpy(char *dst, const char *src, size_t size)
 {
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0' && i <= size)
+	if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z')
+		|| (c >= 'A' && c <= 'Z'))
 	{
-		((unsigned char *) dst)[i] = ((unsigned char *) src)[i];
-		i++;
+		return (1);
+	}
+	else
+	{
+		return (0);
 	}
 }

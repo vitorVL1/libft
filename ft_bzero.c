@@ -1,24 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 18:28:35 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/25 18:28:36 by vlima            ###   ########.fr       */
+/*   Created: 2022/10/26 12:19:54 by vlima             #+#    #+#             */
+/*   Updated: 2022/10/31 15:09:14 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int c)
+#include <stddef.h> 
 
+void	*ft_bzero(void *s, size_t n)
 {
-	if (c >= '32' && c <= '126')
+	size_t	i;
+
+	i = 0;
+	while (i < n)
 	{
-		return (1);
+		((unsigned char *)s)[i] = '\0';
+		i++;
 	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
+/* #include <nptrings.h>
+#include <stdio.h>
+int main()
+{
+	char s[] = "abcasdasdada";
+	printf("%s\n",s);
+	ft_bzero(s,2);
+	printf("%s",s);
+    bzero(s,2);
+	printf("%s",s);
+} */

@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ftisalnum.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 18:19:04 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/25 18:19:09 by vlima            ###   ########.fr       */
+/*   Created: 2022/10/28 17:42:03 by vlima             #+#    #+#             */
+/*   Updated: 2022/10/31 15:15:28 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include "libft.h"
 
+char	*ft_strdup(const char *s1)
 {
-	if (c >= '0' && c <= '9' || c >= 'a' && c <= 'z' || c >= 'a' && c <= 'z')
-	{
-		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	char	*dest;
+
+	dest = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (!dest)
+		return (NULL);
+	//ft_strlcpy(dest, s1,1000);
+	return (dest);
 }

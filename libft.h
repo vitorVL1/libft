@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/29 16:07:00 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/29 16:50:32 by vlima            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #ifndef  LIBFT_H
 # define LIBFT_H
 
@@ -33,7 +21,7 @@ void	*ft_memset(void *s, int c, size_t n);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s1);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-size_t	ft_nptrlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);

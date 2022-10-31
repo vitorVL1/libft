@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stlrcat.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/26 13:38:57 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/29 16:22:04 by vlima            ###   ########.fr       */
+/*   Created: 2022/10/26 11:11:12 by vlima             #+#    #+#             */
+/*   Updated: 2022/10/31 15:34:38 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h> 
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	int	i;
-	int	i1;
+	unsigned char	a;
+	size_t			i;
 
+	a = c;
 	i = 0;
-	i1 = 0;
-	while (dst != '\0')
+	while (i < n)
 	{
+		((unsigned char *)s)[i] = a;
 		i++;
 	}
-	while (src[i] != '\0' && i <= dstsize)
-	{
-		((unsigned char *) dst)[i] = ((unsigned char *) src)[i1];
-		i++;
-		i1++;
-	}
+	return (s);
 }
+/* #include <stdio.h>
+int main()
+{
+	char s[] = "abc";
+	printf("%s\n",s);
+	ft_memset(s,33,1);
+	printf("%s",s);
+}  */

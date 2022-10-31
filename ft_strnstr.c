@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 22:02:58 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/28 16:52:38 by vlima            ###   ########.fr       */
+/*   Updated: 2022/10/31 15:07:27 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	int	n;
-	int	a;
+	size_t	n;
+	size_t	a;
 
 	n = 0;
 	a = 0;
