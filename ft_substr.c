@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 12:27:19 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/01 14:13:40 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/01 14:18:03 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	str[j] = 0;
 	return (str);
+}
