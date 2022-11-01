@@ -6,22 +6,23 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 17:00:57 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/31 16:03:23 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/01 12:01:45 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+#include "libft.h"
+
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	tot_size;
-	void	*dst;
+	void	*ptr;
 
-	tot_size = size * count;
-	if (!(dst = malloc(tot_size)))
-		return (0);
-	ft_memset(dst, 0, tot_size);
-	return (dst);
+	ptr = malloc(count * size);
+	if (ptr == NULL)
+		return (ptr);
+	ft_bzero(ptr, size * count);
+	return (ptr);
 }
 
 /* #include <stdio.h>

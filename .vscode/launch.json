@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/nfs/homes/vlima/Desktop/libft/is",
-      "program": "/nfs/homes/vlima/Desktop/libft/is/build/Debug/outDebug",
+      "cwd": "/nfs/homes/vlima/Desktop/libft",
+      "program": "/nfs/homes/vlima/Desktop/libft/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

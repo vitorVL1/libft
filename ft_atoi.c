@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 12:20:53 by vlima             #+#    #+#             */
-/*   Updated: 2022/10/28 13:17:21 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/01 11:36:01 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,22 +20,24 @@ int	ft_atoi(const char *nptr)
 	res = 0;
 	sinal = 1;
 	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
+	{
 		i++;
-	while (nptr[i] == '+' || nptr[i] == '-')
+	}
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
 		if (nptr[i] == '-')
-			sinal = -sinal;
+			sinal = -1;
 		i++;
 	}
-	while (nptr[i] && (nptr[i] > 47 && nptr[i] < 58))
+	while (nptr[i] && (nptr[i] >= '0' && nptr[i] <= '9'))
 	{
-		res = (res * 10) + (nptr[i] - 48);
+		res = (res * 10) + (nptr[i] - '0');
 		i++;
 	}
-	return (sinal * res);
+	return (res * sinal);
 }
 
-/* #include <stdio.h>
+/*  #include <stdio.h>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -45,13 +47,9 @@ int main () {
    int val;
    char str[20];
    
-   strcpy(str, "98993489");
+   strcpy(str, "+54");
    val = ft_atoi(str);
-   printf("String value = %s, Int value = %d\n", str, val);
-
-   strcpy(str, "tutorialspoint.com");
-   val = ft_atoi(str);
-   printf("String value = %s, Int value = %d\n", str, val);
+   printf("String value = %s, str value = %c\n", str, val);
 
    return(0);
-} */
+}  */
