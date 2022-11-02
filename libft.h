@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 14:31:38 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/01 14:31:39 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/02 17:27:36 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_atoi(const char *nptr);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
