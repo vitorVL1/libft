@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa                                            :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 15:20:59 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/04 16:31:51 by vlima            ###   ########.fr       */
+/*   Created: 2022/11/04 16:51:19 by vlima             #+#    #+#             */
+/*   Updated: 2022/11/04 17:28:08 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_nblen(int nb)
+#include "libft.h"
+
+int	ft_nlen(int nb)
 {
-	int len
+	int	len;
+
 	len = 0;
-	if (nb <=0)
+	if (nb <= 0)
 		len++;
 	while (nb)
 	{
@@ -24,15 +27,30 @@ int ft_nblen(int nb)
 	return (len);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	int nb;
-	char *str;
+	int		nb;
+	int		len;
+	char	*str;
+
 	nb = n;
-	if(nb < 0)
+
+	len = ft_nlen(n);
+	if (nb == 0)
+		str[0] = '0';
+	str = (char *)malloc(len +1);
+	if (nb < 0)
 	{	
 		str[0] = '-';
-		nb = -nb ; 
+		nb = -nb;
+		len++;
 	}
-	while (nb )
+	str[len] = '\0';
+	while (len)
+	{
+		str[len] = nb % 10 + '0';
+		len--;
+		nb /= 10;
+	}
+	return (str);
 }
