@@ -5,7 +5,6 @@ SRCS =	ft_isalnum.c ft_isprint.c ft_memcmp.c ft_strlcat.c ft_strncmp.c ft_atoi.c
 
 OBJS = $(SRCS:.c=.o)
 
-BONUS = 
 BONUS_OBJS = $(BONUS:.c=.o)
 
 cc = gcc
