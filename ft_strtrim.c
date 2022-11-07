@@ -6,11 +6,11 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 15:13:05 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/04 14:28:24 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/07 14:19:53 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/* #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -30,7 +30,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if ((ft_strncmp(&s1[len - len2], set, len2)) == 0)
 	ft_substr(s1,)
 	return (str);
-}
+} */
 
 /*     int	 main()
 {	

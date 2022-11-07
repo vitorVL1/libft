@@ -6,51 +6,31 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:51:19 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/04 17:28:08 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/07 16:13:11 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_nlen(int nb)
+char	*ft_lenret(long long n, char *str)
 {
-	int	len;
-
-	len = 0;
-	if (nb <= 0)
-		len++;
-	while (nb)
-	{
-		len ++;
-		nb = nb / 10;
-	}
-	return (len);
+	if (n >= 10)
+		str = ft_lenret(n / 10, str);
+	*str++ = (n % 10) + '0';
+	*str = 0;
+	return (str);
 }
 
 char	*ft_itoa(int n)
 {
-	int		nb;
-	int		len;
-	char	*str;
+	char	str[15];
 
-	nb = n;
-
-	len = ft_nlen(n);
-	if (nb == 0)
-		str[0] = '0';
-	str = (char *)malloc(len +1);
-	if (nb < 0)
-	{	
-		str[0] = '-';
-		nb = -nb;
-		len++;
-	}
-	str[len] = '\0';
-	while (len)
+	if (n < 0)
 	{
-		str[len] = nb % 10 + '0';
-		len--;
-		nb /= 10;
+		str[0] = '-';
+		ft_lenret(((long long)n * -1), &str[1]);
 	}
-	return (str);
+	else
+		ft_lenret(n, str);
+	return (ft_substr(str, 0, (ft_strlen(str))));
 }
