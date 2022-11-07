@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 14:31:38 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/07 17:18:47 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/07 17:54:14 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
-
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int nb, int fd);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 #endif
