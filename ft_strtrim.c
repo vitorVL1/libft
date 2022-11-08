@@ -6,31 +6,50 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 15:13:05 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/07 17:35:09 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/08 12:04:15 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+static int
+	ft_char_in_set(char c, char const *set)
 {
-	char	*str;
-	int		i;
-	int		len;
-	int		len2;
+	size_t	i;
 
 	i = 0;
-	len = ft_strlen(s1);
-	len2 = ft_strlen(set);
-	str = (char *)malloc(len + 1);
-	if (!s1 || !set||!str)
-		return (0);
-	if ((ft_strncmp(s1, set, len2)) == 0)
-		i=len2;
-	if ((ft_strncmp(&s1[len - len2], set, len2)) == 0)
-	ft_substr(s1,)
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
+}
+
+char
+	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*str;
+	size_t	i;
+	size_t	start;
+	size_t	end;
+
+	start = 0;
+	while (s1[start] && ft_char_in_set(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ft_char_in_set(s1[end - 1], set))
+		end--;
+	str = (char*)malloc(sizeof(*s1) * (end - start + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (start < end)
+		str[i++] = s1[start++];
+	str[i] = 0;
 	return (str);
-}  
+} 
 
 /*     int	 main()
 {	
