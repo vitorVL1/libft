@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 17:29:42 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/09 12:17:41 by vlima            ###   ########.fr       */
+/*   Created: 2022/11/09 12:29:34 by vlima             #+#    #+#             */
+/*   Updated: 2022/11/09 12:29:45 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	show_num(int n, int fd)
+t_list	*ft_lstnew(void *content)
 {
-	if (n >= 10)
-		show_num(n / 10, fd);
-	write(fd, &"0123456789"[n % 10], 1);
-}
+	t_list	*newlst;
 
-void	ft_putnbr_fd(int n, int fd)
-{
-	if (fd < 0)
-		return ;
-	if (n == -2147483648)
-	{
-		write(fd, "-2147483648", 11);
-		return ;
-	}
-	if (n < 0)
-	{
-		write(fd, "-", 1);
-		n *= -1;
-	}
-	show_num(n, fd);
+newlst = (t_list *)malloc(sizeof(t_list));
+	if (newlst == NULL)
+		return (NULL);
+newlst->content = content;
+newlst->next = NULL;
+	return (newlst);
 }

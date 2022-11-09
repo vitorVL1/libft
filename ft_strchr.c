@@ -6,38 +6,24 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 03:18:48 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/31 17:16:32 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/08 15:34:40 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	unsigned char	ch;
 
-	i = 0;
-	if (c == 0)
+	ch = c;
+	while (*s != '\0' && *s != ch)
 	{
-		while (s[i])
-			i++;
-		return ((char *)&s[i]);
-	}
-	while (*s)
-	{
-		if (*s == c)
-		{
-			return ((char *)s);
-		}
 		s++;
 	}
-	return (NULL);
+	if (*s == ch)
+	{
+		return ((char *)s);
+	}
+	return (0);
 }
-
-/* #include <stdio.h>
-int main() 
-{
-    char s[] = "ABCfdf";
-    ft_nptrchr(s,73);
-    printf("%s\n",);
-} */

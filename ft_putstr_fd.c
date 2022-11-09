@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:14:43 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/07 17:18:38 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/09 12:16:28 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,13 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s)
-		return ;
-	write(fd, s, ft_strlen(s));
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
+	return ;
 }

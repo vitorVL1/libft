@@ -1,37 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 17:29:42 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/09 12:17:41 by vlima            ###   ########.fr       */
+/*   Created: 2022/11/09 15:20:57 by vlima             #+#    #+#             */
+/*   Updated: 2022/11/09 17:20:43 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	show_num(int n, int fd)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	if (n >= 10)
-		show_num(n / 10, fd);
-	write(fd, &"0123456789"[n % 10], 1);
-}
-
-void	ft_putnbr_fd(int n, int fd)
-{
-	if (fd < 0)
+	if (!lst)
 		return ;
-	if (n == -2147483648)
+	while (lst)
 	{
-		write(fd, "-2147483648", 11);
-		return ;
+		f(lst->content);
+		lst = lst->next;
 	}
-	if (n < 0)
-	{
-		write(fd, "-", 1);
-		n *= -1;
-	}
-	show_num(n, fd);
 }

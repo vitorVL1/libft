@@ -6,6 +6,9 @@ SRCS =	ft_isalnum.c ft_isprint.c ft_memcmp.c ft_strlcat.c ft_strncmp.c ft_atoi.c
 
 OBJS = $(SRCS:.c=.o)
 
+BONUS = ft_lstadd_back.c ft_lstadd_front.c ft_lstdelone.c ft_lstlast.c ft_lstclear.c\
+		ft_lstnew.c ft_lstsize.c ft_lstmap.c ft_lstiter.c\
+
 BONUS_OBJS = $(BONUS:.c=.o)
 
 cc = gcc
@@ -27,5 +30,8 @@ fclean:		clean
 			@$(RM) -r $(DIR_OBJS)
 
 re:			fclean $(NAME)
+
+bonus:			$(OBJS) $(BONUS_OBJS)
+				ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 
 .PHONY:		all clean fclean re

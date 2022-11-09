@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 15:13:05 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/08 12:04:15 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/09 11:46:08 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char
 	end = ft_strlen(s1);
 	while (end > start && ft_char_in_set(s1[end - 1], set))
 		end--;
-	str = (char*)malloc(sizeof(*s1) * (end - start + 1));
+	str = (char *)malloc(sizeof(*s1) * (end - start + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -49,11 +49,4 @@ char
 		str[i++] = s1[start++];
 	str[i] = 0;
 	return (str);
-} 
-
-/*     int	 main()
-{	
-	printf("teste 1 %s\n", ft_strtrim("lorem \n ipsum \t dolor \n sit \t amet", " "));
-	printf("teste 2 %s\n", ft_strtrim("lorem ipsum dolor sit amet", "et"));
-}*/
- 
+}

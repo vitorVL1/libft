@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 16:37:30 by vitorvl           #+#    #+#             */
-/*   Updated: 2022/10/31 16:47:06 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/08 15:36:34 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 		{
 			return ((char *)&s[i]);
 		}
@@ -31,11 +31,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-/* #include <stdio.h>
-int main() 
-{
-    char s[] = "ABCfdfc";
-    
-    printf("%s\n",ft_nptrrchr(s,65));
-}  */

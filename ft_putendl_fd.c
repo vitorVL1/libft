@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 17:26:45 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/07 17:27:08 by vlima            ###   ########.fr       */
+/*   Updated: 2022/11/09 12:10:50 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	const char	nl = '\n';
-
-	write(fd, s, ft_strlen(s));
-	write(fd, &nl, 1);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
