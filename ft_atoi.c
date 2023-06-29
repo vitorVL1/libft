@@ -6,7 +6,7 @@
 /*   By: vlima <vlima@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/28 12:20:53 by vlima             #+#    #+#             */
-/*   Updated: 2022/11/01 11:36:01 by vlima            ###   ########.fr       */
+/*   Updated: 2023/04/21 14:47:19 by vlima            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int	ft_atoi(const char *nptr)
 	}
 	return (res * sinal);
 }
-
 /*  #include <stdio.h>
 
 #include <stdio.h>
